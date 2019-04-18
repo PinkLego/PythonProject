@@ -1,0 +1,25 @@
+>>> import sys
+>>> print(sys.version)
+3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]
+>>> def lots_of_numbers(max):
+	for x in range(0, max):
+		print(x)
+
+		
+>>> def lots_of_numbers(max):
+	t1 = time.time()
+	for x in range(0, max):
+		print(x)
+	t2 = time.time()
+	print('it took %s seconds' % (t2-t1))
+
+	
+>>> lots_of_numbers(1000)
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    lots_of_numbers(1000)
+  File "<pyshell#12>", line 2, in lots_of_numbers
+    t1 = time.time()
+NameError: name 'time' is not defined
+>>>
